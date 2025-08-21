@@ -77,7 +77,6 @@ The repository is organized as follows:
 -   `tagalog_stop_words.txt`: The list of Tagalog stop words.
 -   `Dataset/full.csv`: The dataset used for training and testing.
 -   `Models/`: Contains the trained models (`.joblib` files).
--   `Results/`: Contains CSV files with the detailed performance metrics of the models.
 -   `Paper.pdf`: The research paper detailing the study.
 -   `Presentation.pdf`: The presentation summarizing the project.
 -   `README.md`: This file.
