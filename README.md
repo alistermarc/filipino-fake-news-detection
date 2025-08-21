@@ -19,13 +19,14 @@ The project utilizes two main files for its data:
 
 ## Methodology
 
-The project is structured within the `AI_201_FINAL_PROJECT_SCRIPT.ipynb` Jupyter Notebook and follows these steps:
+The project is structured into two main Python scripts: `train_models.py` for the machine learning pipeline and `app.py` for the web application.
 
 1.  **Data Loading and Splitting**: The `full.csv` dataset is loaded and split into an 80% training set and a 20% testing set.
 2.  **Text Preprocessing**: A text processing pipeline is established, which includes converting text to lowercase and removing stop words.
 3.  **Feature Extraction**: `TfidfVectorizer` is used to convert the text data into numerical features.
-4.  **Model Training and Evaluation**: A suite of ten different classifiers from scikit-learn were trained and evaluated.
+4.  **Model Training and Evaluation**: A suite of ten different classifiers from scikit-learn were trained and evaluated using `train_models.py`.
 5.  **Hyperparameter Tuning**: Two experiments were conducted. The first used default hyperparameters. The second used `GridSearchCV` to perform an exhaustive search to find the optimal combination of features and hyperparameters for each classifier.
+6.  **Model Deployment**: The best performing model is served using a Flask web application in `app.py`.
 
 ## Results
 
@@ -66,20 +67,22 @@ To build upon this work, the following steps are recommended:
 
 The repository is organized as follows:
 
--   `AI_201_FINAL_PROJECT_SCRIPT.ipynb`: The main Jupyter Notebook containing all the code for data loading, preprocessing, model training, and evaluation.
--   `full.csv`: The dataset used for training and testing.
+-   `app.py`: The Flask web application for model deployment.
+-   `train_models.py`: The script for data loading, preprocessing, model training, and evaluation.
+-   `requirements.txt`: A list of Python packages required to run the project.
 -   `tagalog_stop_words.txt`: The list of Tagalog stop words.
--   `Models/No Hyperparameterer tuning/`: Contains the trained models (`.joblib` files) without hyperparameter tuning.
--   `Models/With Hyperparameter tuning/`: Contains the trained models (`.joblib` files) with hyperparameter tuning.
--   `Results/`: Contains CSV files with the detailed performance metrics of the models from both experiments.
+-   `Dataset/full.csv`: The dataset used for training and testing.
+-   `Models/`: Contains the trained models (`.joblib` files).
+-   `Results/`: Contains CSV files with the detailed performance metrics of the models.
 -   `Paper.pdf`: The research paper detailing the study.
 -   `Presentation.pdf`: The presentation summarizing the project.
 -   `README.md`: This file.
+-   `templates/`: Contains the HTML template for the web application.
 
 ## How to Use
 
-1.  Ensure you have Python and Jupyter Notebook installed.
-2.  Install the necessary libraries: `pandas`, `scikit-learn`, `joblib`, and `numpy`.
-3.  Open and run the `AI_201_FINAL_PROJECT_SCRIPT.ipynb` notebook to replicate the experiments. The notebook will train the models, save them, and generate the results CSVs.
-
-The saved models in the `.joblib` files can be loaded for direct use in making predictions without needing to retrain them.
+1.  Ensure you have Python installed.
+2.  Install the necessary libraries by running `pip install -r requirements.txt`.
+3.  To train the models with default hyperparameters, run `python train_models.py`. The models will be saved in the `Models/No_Hyperparameter_Tuning` directory.
+4.  To train the models with hyperparameter tuning, run `python train_models.py --tuned`. The models will be saved in the `Models/With_Hyperparameter_Tuning` directory. This process may take a significant amount of time.
+5.  To run the web application, execute `python app.py` and navigate to the provided URL in your web browser.
