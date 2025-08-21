@@ -51,6 +51,10 @@ The Stochastic Gradient Descent (SGD) classifier emerged as the top-performing m
 
 The best-performing model (SGD) was deployed using a simple Flask web application. This allows users to input text and receive an instant prediction of whether the news is real or fake, demonstrating a practical application of the research.
 
+## Deployment
+
+The web application is deployed on Hugging Face Spaces and can be accessed here: [https://huggingface.co/spaces/alistermarc/filipino-fake-news-detection](https://huggingface.co/spaces/alistermarc/filipino-fake-news-detection)
+
 ## Conclusion
 
 This study successfully developed a simple yet effective model for identifying fake news in the Filipino language, achieving an accuracy (96.26%) comparable to more complex deep learning approaches. The Stochastic Gradient Descent classifier proved to be the optimal model due to its high accuracy and efficiency. This work marks a significant advancement by creating an easily deployable tool to combat misinformation in the Philippines.
