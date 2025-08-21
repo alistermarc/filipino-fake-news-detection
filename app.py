@@ -5,10 +5,8 @@ import numpy
 
 # Load the model
 try:
-    # Correct path for the best model as per the new README
     model = joblib.load('Models/With_Hyperparameter_Tuning/SGDClassifier_best_model.joblib')
 except FileNotFoundError:
-    # Fallback for different naming or location
     model = None
 
 # Load Tagalog stop words

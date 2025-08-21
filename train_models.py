@@ -213,7 +213,6 @@ def main():
         X_train, y_train, X_test, y_test, stop_words, classifiers, all_param_grids, output_dir, args.tuned
     )
 
-    # Save results to CSV
     pd.DataFrame(test_results).to_csv(output_dir / "test_results.csv", index=False)
     pd.DataFrame(train_results).to_csv(output_dir / "train_results.csv", index=False)
     print(f"\nResults saved in {output_dir}")
