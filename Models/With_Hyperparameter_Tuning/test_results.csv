@@ -1,0 +1,11 @@
+Classifier,Accuracy,F1 Score,Best Params
+MultinomialNB,0.9174454828660437,0.9174829490885108,"{'classifier__alpha': 0.1, 'tfidf__max_df': 0.7, 'tfidf__ngram_range': (1, 1)}"
+LogisticRegression,0.9595015576323987,0.9594320574924112,"{'classifier__C': 10.0, 'tfidf__max_df': 0.7, 'tfidf__ngram_range': (1, 1)}"
+RandomForestClassifier,0.9485981308411215,0.9485444311509548,"{'classifier__n_estimators': 200, 'tfidf__max_df': 0.7, 'tfidf__ngram_range': (1, 1)}"
+DecisionTreeClassifier,0.9080996884735203,0.9080628009191763,"{'classifier__max_depth': 20, 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 5, 'tfidf__max_df': 0.7, 'tfidf__ngram_range': (1, 1)}"
+GradientBoostingClassifier,0.9376947040498442,0.9375877807575559,"{'classifier__learning_rate': 0.1, 'classifier__max_depth': 5, 'classifier__n_estimators': 100, 'tfidf__max_df': 0.7, 'tfidf__ngram_range': (1, 1)}"
+AdaBoostClassifier,0.9361370716510904,0.9360703538542166,"{'classifier__learning_rate': 1.0, 'classifier__n_estimators': 200, 'tfidf__max_df': 0.7, 'tfidf__ngram_range': (1, 1)}"
+SVC,0.9610591900311527,0.961027623703131,"{'classifier__C': 10.0, 'classifier__kernel': 'linear', 'tfidf__max_df': 0.7, 'tfidf__ngram_range': (1, 1)}"
+KNeighborsClassifier,0.8722741433021807,0.8720918407841736,"{'classifier__n_neighbors': 7, 'classifier__weights': 'distance', 'tfidf__max_df': 0.7, 'tfidf__ngram_range': (1, 2)}"
+SGDClassifier,0.9626168224299065,0.9625822353450881,"{'classifier__alpha': 0.0001, 'classifier__penalty': 'l2', 'tfidf__max_df': 0.7, 'tfidf__ngram_range': (1, 1)}"
+MLPClassifier,0.9610591900311527,0.9610662867115346,"{'classifier__alpha': 0.0001, 'classifier__learning_rate_init': 0.001, 'tfidf__max_df': 0.7, 'tfidf__ngram_range': (1, 1)}"

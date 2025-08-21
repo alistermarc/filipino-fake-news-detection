@@ -1,0 +1,11 @@
+Classifier,Accuracy,F1 Score,Best Params
+MultinomialNB,0.8598130841121495,0.8587304857777288,{'tfidf__max_df': 0.9}
+LogisticRegression,0.9485981308411215,0.9485022549797514,{'tfidf__max_df': 0.9}
+RandomForestClassifier,0.940809968847352,0.9407407683939434,{'tfidf__max_df': 0.9}
+DecisionTreeClassifier,0.9065420560747663,0.9065420560747663,{'tfidf__max_df': 0.9}
+GradientBoostingClassifier,0.9376947040498442,0.9375877807575559,{'tfidf__max_df': 0.9}
+AdaBoostClassifier,0.940809968847352,0.940809968847352,{'tfidf__max_df': 0.9}
+SVC,0.956386292834891,0.9562691844780873,{'tfidf__max_df': 0.9}
+KNeighborsClassifier,0.8785046728971962,0.8784197647336303,{'tfidf__max_df': 0.9}
+SGDClassifier,0.9626168224299065,0.9625822353450881,{'tfidf__max_df': 0.9}
+MLPClassifier,0.9610591900311527,0.9610662867115346,{'tfidf__max_df': 0.9}

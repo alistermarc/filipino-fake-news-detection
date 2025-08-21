@@ -137,6 +137,5 @@ dmypy.json
 cython_debug/
 
 # Models
-Models/
 *.joblib
 .DS_Store
