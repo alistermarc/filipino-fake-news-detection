@@ -21,6 +21,8 @@ The project utilizes two main files for its data:
 
 The project is structured into two main Python scripts: `train_models.py` for the machine learning pipeline and `app.py` for the web application.
 
+![Pipeline Flowchart](pipeline_flowchart.png)
+
 1.  **Data Loading and Splitting**: The `full.csv` dataset is loaded and split into an 80% training set and a 20% testing set.
 2.  **Text Preprocessing**: A text processing pipeline is established, which includes converting text to lowercase and removing stop words.
 3.  **Feature Extraction**: `TfidfVectorizer` is used to convert the text data into numerical features.
