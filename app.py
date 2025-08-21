@@ -3,16 +3,13 @@ from flask import Flask, request, render_template
 import sklearn
 import numpy
 
-# Load the model and the vectorizer
+# Load the model
 try:
     # Correct path for the best model as per the new README
-    model = joblib.load('Models/With Hyperparameter tuning/DecisionTreeClassifier_best_model.joblib')
-    # The user must provide this file by saving it from the notebook
-    vectorizer = joblib.load('tfidf_vectorizer.joblib') 
+    model = joblib.load('Models/With Hyperparameter tuning/SGDClassifier_best_model.joblib')
 except FileNotFoundError:
     # Fallback for different naming or location
     model = None
-    vectorizer = None
 
 # Load Tagalog stop words
 try:
@@ -29,8 +26,8 @@ def index():
     text = ""
     error = None
 
-    if not model or not vectorizer:
-        error = "Model or vectorizer not found. Please ensure 'DecisionTreeClassifier_best_model.joblib' and 'tfidf_vectorizer.joblib' are in the correct paths."
+    if not model:
+        error = "Model not found. Please ensure 'SGDClassifier_best_model.joblib' is in the correct path."
         return render_template('index.html', error=error)
 
     if request.method == 'POST':
@@ -39,11 +36,8 @@ def index():
             # Preprocess the text (simple lowercase and stop word removal)
             processed_text = ' '.join([word for word in text.lower().split() if word not in stop_words])
             
-            # Vectorize the text
-            vectorized_text = vectorizer.transform([processed_text])
-            
             # Make a prediction
-            result = model.predict(vectorized_text)
+            result = model.predict([processed_text])
             # The labels are 0 for 'real' and 1 for 'fake'
             prediction = "Fake" if result[0] == 1 else "Real"
 
